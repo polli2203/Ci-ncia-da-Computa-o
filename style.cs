@@ -6,7 +6,7 @@
     --bg-color: #222831;
     --primary-color: #DDDDDD;
     --secondary-color: #F05454;
-    --font: "Nunito Sans", sans-serif;
+    --font: "Nunito Sans", Edu Australia VIC WA NT Hand Guides ;
 }
 
 body {
