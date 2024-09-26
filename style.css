@@ -1,12 +1,9 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
-</style>
-
 :root {
     --bg-color: #222831;
     --primary-color: #DDDDDD;
     --secondary-color: #F05454;
-    --font: "Nunito Sans", Edu Australia VIC WA NT Hand Guides ;
+    --font: "Edu AU VIC WA NT Guides", system-ui;
 }
 
 body {
