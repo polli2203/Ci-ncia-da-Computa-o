@@ -1,33 +1,20 @@
-import { getCSS } from "./common.js"
+const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
-async function quantidadeUsuariosPorRede() {
-    const url = 'https://raw.githubusercontent.com/polli2203/Ci-ncia-da-Computa-o/refs/heads/main/esportes/esportes-dados-globais(1).json'
+async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadeDeUsuarios = Object.values(dados)
+    const pessoasConectadas = (dados.total_pessoas_conectadas / 1e9)
+    const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
+    const horas = parseInt(dados.tempo_medio)
+    const minutos = Math.round((dados.tempo_medio - horas) * 100)
+    const porcentagemConectada = ((pessoasConectadas / pessoasNoMundo ) * 100).toFixed(2)
 
-    const data = [
-        {
-            x: nomeDasRedes, 
-            y: quantidadeDeUsuarios, 
-            type: 'bar',
-            marker: {
-                color: getCSS('--primary-color')
-            }
-        }
-    ]
+    const paragrafo = document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${pessoasNoMundo} bilhões</span> de pessoas e que aproximadamente <span>${pessoasConectadas} bilhões</span> estão conectadas em alguma rede social e passam em média <span>${horas} horas</span> e <span>${minutos} minutos</span> conectadas.<br>Isso significa que aproximadamente <span>${porcentagemConectada}%</span> de pessoas estão conectadas em alguma rede social.`
 
-    const layout = {
-        plot_bgcolor: getCSS('--bg-color'),
-        paper_bgcolor: getCSS('--bg-color')
-
-    }
-
-    const grafico = document.createElement('div')
-    grafico.className = 'grafico'
-    document.getElementById('graficos-container').appendChild(grafico)
-    Plotly.newPlot(grafico, data, layout)
+    const container = document.getElementById('graficos-container')
+    container.appendChild(paragrafo)
 }
 
-quantidadeUsuariosPorRede()
+vizualizarInformacoesGlobais()
