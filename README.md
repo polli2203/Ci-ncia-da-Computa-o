@@ -1,2 +1,4 @@
 # Ci-ncia-da-Computa-o
-Dupla: Polliana Arruda Roesler n°24 e Kevin Rossetti n°16
+Dupla: 
+Polliana Arruda Roesler n°24 
+Kevin Rossetti n°16
