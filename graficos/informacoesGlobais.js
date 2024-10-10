@@ -4,7 +4,6 @@ async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = await res.json()
     const praticamRegularmente = (dados.praticam_regularmente_esportes/ 1e9)
-    const assistemEsportes = (dados.total_pessoas_que_assistem_esportes/ 1e9)
     const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
     const horas = parseInt(dados.tempo_medio)
     const minutos = Math.round((dados.tempo_medio_semana_praticando_esporte - horas) * 100)
