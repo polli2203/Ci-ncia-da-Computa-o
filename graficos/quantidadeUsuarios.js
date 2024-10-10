@@ -4,7 +4,7 @@ async function quantidadeUsuariosPorRede() {
 <<<<<<< HEAD
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
 =======
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
+    const url = 'https://raw.githubusercontent.com/polli2203/Ci-ncia-da-Computa-o/refs/heads/main/esportes/esportes-mais-praticados(1).json'
 >>>>>>> 02b401450a390b3281a7f720ab8d603c586cb177
     const res = await fetch(url)
     const dados = await res.json()
