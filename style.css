@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 :root {
     --bg-color: #87A2FF;
     --primary-color: #C4D7FF;
     --secondary-color: #FFD7C4;
-    --font: "Edu AU VIC WA NT Guides", system-ui;
+    --font: "Playfair Display", serif;
 }
 
 body {
